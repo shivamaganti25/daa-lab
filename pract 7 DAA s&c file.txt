@@ -1,0 +1,7 @@
+Summary
+
+In this practical, the Making a Change Problem was implemented using Dynamic Programming. The program takes a given amount and a set of coin values as input. It uses a DP array to find the minimum number of coins required to make the given amount. The program checks different coin combinations and stores the minimum result for each amount. Execution time is also calculated using Python's time module.
+
+Conclusion
+
+This practical helped me understand how Dynamic Programming can be used to solve the Making a Change Problem efficiently. Instead of calculating the same values repeatedly, the results are stored and reused. The program successfully finds the minimum number of coins required for the given amount. It also helped me understand the time and space complexity of a Dynamic Programming approach.
