@@ -1,0 +1,7 @@
+Summary
+
+In this practical, factorial of a number was implemented using two methods: iterative and recursive. In the iterative method, a for loop is used to calculate the factorial, while in the recursive method, the function calls itself until it reaches the base condition. For the given input 5, both methods produced the result 120. The execution time was also calculated using the time module.
+
+Conclusion
+
+From this practical, I understood the difference between iterative and recursive methods for finding factorial. Both methods give the same result, but their working method is different. The iterative method uses a loop, whereas the recursive method uses repeated function calls. The practical also helped in understanding how to calculate and compare the execution time of both methods. For input 5, both programs successfully gave the factorial as 120

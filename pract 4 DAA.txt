@@ -1,0 +1,58 @@
+1.Factorial using Iterative Method
+
+
+import time
+
+n = int(input("Enter a number: "))
+
+start = time.time()
+
+fact = 1
+
+for i in range(1, n + 1):
+    fact = fact * i
+
+end = time.time()
+
+print("Factorial =", fact)
+print("Execution time =", end - start, "seconds")
+
+
+output:
+
+Enter a number: 5
+Factorial = 120
+Execution time = 0.00016880035400390625 seconds
+
+
+
+2.Factorial using Recursive Method
+
+
+import time
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
+n = int(input("Enter a number: "))
+
+start = time.time()
+
+fact = factorial(n)
+
+end = time.time()
+
+print("Factorial =", fact)
+print("Execution time =", end - start, "seconds")
+
+
+output:
+
+
+Enter a number: 5
+Factorial = 120
+Execution time = 0.0001480579376220703 seconds
