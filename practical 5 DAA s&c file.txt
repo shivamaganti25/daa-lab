@@ -1,0 +1,9 @@
+PRACTICAL: IMPLEMENTATION OF KNAPSACK PROBLEM USING DYNAMIC PROGRAMMING
+
+SUMMARY
+
+In this practical, the 0/1 Knapsack problem was implemented using the Dynamic Programming technique. The main purpose of the program is to select items from a given set so that the total weight does not exceed the capacity of the knapsack and the total value is maximum. A DP table was used to store the results of smaller subproblems and use them to solve the larger problem. For each item, the program checks whether including or excluding it gives a better value. This avoids calculating the same subproblems repeatedly and makes the solution more efficient.
+
+CONCLUSION
+
+The Knapsack problem was successfully implemented using Dynamic Programming in Python. The program produced the maximum possible value for the given knapsack capacity. Through this practical, it was understood how Dynamic Programming can be used to break a problem into smaller parts and store their results for future use. The program has a time complexity of O(n × capacity) and a space complexity of O(n × capacity).
