@@ -1,0 +1,7 @@
+ Summary
+
+In this practical, we implemented the **Matrix Chain Multiplication problem using Dynamic Programming** in Python. The objective was to determine the most efficient way to multiply a sequence of matrices by finding the optimal placement of parentheses. Dynamic Programming was used to divide the problem into smaller subproblems and store their results to avoid repeated calculations. The algorithm calculates the minimum number of scalar multiplications required for the given chain matrices
+
+ Conclusion
+
+The Matrix Chain Multiplication problem was successfully implemented using Dynamic Programming. The program determines the minimum multiplication cost and the optimal parenthesization of the matrices. This practical demonstrates how Dynamic Programming can improve the efficiency of solving problems that have overlapping subproblems and optimal substructure. The time complexity of the algorithm is **O(n³)** and the space complexity is **O(n²)**.

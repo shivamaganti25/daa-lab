@@ -1,0 +1,89 @@
+def matrix_chain_order(p):
+    """
+    Find the minimum number of scalar multiplications needed
+    to multiply a chain of matrices.
+
+    p[i-1] x p[i] represents matrix Ai.
+
+    Example:
+    p = [10, 20, 30, 40]
+    represents:
+        A1 = 10x20
+        A2 = 20x30
+        A3 = 30x40
+    """
+
+    n = len(p) - 1
+
+    # m[i][j] = minimum multiplication cost for Ai...Aj
+    m = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+
+    # s[i][j] = position at which the optimal split occurs
+    s = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+
+    # Chain length starts from 2
+    for length in range(2, n + 1):
+
+        for i in range(1, n - length + 2):
+
+            j = i + length - 1
+
+            # Set initial cost to infinity
+            m[i][j] = float('inf')
+
+            # Try every possible split
+            for k in range(i, j):
+
+                cost = (
+                    m[i][k]
+                    + m[k + 1][j]
+                    + p[i - 1] * p[k] * p[j]
+                )
+
+                if cost < m[i][j]:
+                    m[i][j] = cost
+                    s[i][j] = k
+
+    return m, s
+
+
+def print_optimal_parentheses(s, i, j):
+    """Print the optimal parenthesization."""
+
+    if i == j:
+        return f"A{i}"
+
+    k = s[i][j]
+
+    left = print_optimal_parentheses(s, i, k)
+    right = print_optimal_parentheses(s, k + 1, j)
+
+    return f"({left} x {right})"
+
+
+# -------------------------
+# Main Program
+# -------------------------
+
+# Matrix dimensions:
+# A1 = 10x20
+# A2 = 20x30
+# A3 = 30x40
+# A4 = 40x30
+p = [10, 20, 30, 40, 30]
+
+m, s = matrix_chain_order(p)
+
+n = len(p) - 1
+
+print("Minimum number of scalar multiplications:", m[1][n])
+
+print("Optimal parenthesization:",
+      print_optimal_parentheses(s, 1, n))
+
+
+
+output:
+
+Minimum number of scalar multiplications: 30000
+Optimal parenthesization: (((A1 x A2) x A3) x A4)
