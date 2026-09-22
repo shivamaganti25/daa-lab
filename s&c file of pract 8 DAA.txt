@@ -1,0 +1,9 @@
+ Summary
+
+In this practical, we implemented **Graph Traversal using Breadth First Search (BFS) and Depth First Search (DFS)** in Python. The graph was represented using an adjacency list, where node 1 is connected to nodes 2 and 3, node 2 is connected to nodes 4 and 5, and node 3 is connected to nodes 6 and 7.
+
+BFS traverses the graph level by level using a queue, while DFS explores a path as deeply as possible before backtracking using recursion. For the given graph, the BFS traversal is **1, 2, 3, 4, 5, 6, 7**, whereas the DFS traversal is **1, 2, 4, 5, 3, 6, 7**.
+
+Conclusion
+
+The practical successfully demonstrated the implementation of **BFS and DFS graph traversal algorithms** in Python. BFS is useful for exploring nodes level by level, while DFS is useful for exploring nodes deeply along each path. Both algorithms provide systematic ways to visit all the nodes of a graph. The time complexity of both BFS and DFS is **O(V + E)**, where V represents the number of vertices and E represents the number of edges.
